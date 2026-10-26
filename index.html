@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My First GitHub Website</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>My website is officially live on GitHub Pages.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedhyaOS: Product Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#os-desktop">Skip to desktop</a>
+
+    <div id="os-desktop" class="os-desktop">
+      <header class="os-menubar">
+        <p class="os-logo">MedhyaOS</p>
+        <p id="os-app-name" class="os-app-name">Desktop</p>
+        <div class="os-menubar-right">
+          <button type="button" id="os-search" class="os-icon-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <path d="M16 16.5 20 20.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button type="button" id="theme-toggle" aria-label="Switch to dark mode">Dark mode</button>
+          <p id="os-clock" class="os-clock"></p>
+        </div>
+      </header>
+
+      <div id="os-icons" class="os-icons"></div>
+      <div id="os-windows" class="os-windows"></div>
+
+      <nav id="os-dock" class="os-dock" aria-label="Dock"></nav>
+    </div>
+
+    <div id="os-spotlight" class="os-spotlight" hidden>
+      <div class="os-spotlight-panel" role="dialog" aria-label="Search MedhyaOS">
+        <input id="os-spotlight-input" type="search" placeholder="Open an app, project, or role…" autocomplete="off" />
+        <ul id="os-spotlight-results"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
